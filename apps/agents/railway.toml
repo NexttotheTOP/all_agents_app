@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd ../.. && pnpm install && pnpm build:agents"
+buildCommand = "cd ../.. && pnpm install && cd apps/agents && pnpm build"
 
 [deploy]
 startCommand = "cd apps/agents && pnpm start"
