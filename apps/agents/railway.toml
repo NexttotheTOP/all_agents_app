@@ -1,9 +1,9 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install -g pnpm && pnpm install && pnpm build"
+buildCommand = "npm install -g pnpm && export PATH=$PATH:/usr/local/bin && pnpm install && pnpm build"
 
 [deploy]
-startCommand = "pnpm start"
+startCommand = "export PATH=$PATH:/usr/local/bin && pnpm start"
 healthcheckPath = "/info"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
