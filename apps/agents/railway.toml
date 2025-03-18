@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "cd ../.. && pnpm install && pnpm build:agents"
+
+[deploy]
+startCommand = "cd apps/agents && pnpm start"
+healthcheckPath = "/info"
+healthcheckTimeout = 100
+restartPolicyType = "on_failure" 

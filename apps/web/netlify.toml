@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm build"
+  command = "cd ../.. && pnpm install && pnpm build:web"
   publish = ".next"
 
 [[plugins]]
