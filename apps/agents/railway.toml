@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd ../.. && npm install && cd apps/agents && npm run build:internal"
+buildCommand = "cd ../.. && npm cache clean --force && npm install --legacy-peer-deps && cd apps/agents && npm run build:internal"
 
 [deploy]
 startCommand = "npm start"
