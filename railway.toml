@@ -1,9 +1,9 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install --legacy-peer-deps && npm run build"
+buildCommand = "npm install -g corepack@0.24.1 && corepack enable && pnpm install && pnpm build"
 
 [deploy]
-startCommand = "npm run dev"
+startCommand = "pnpm dev"
 healthcheckPath = "/info"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
