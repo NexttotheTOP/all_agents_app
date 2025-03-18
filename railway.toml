@@ -1,9 +1,9 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd apps/agents && pnpm install && pnpm build"
+buildCommand = "npm install --legacy-peer-deps && npm run build"
 
 [deploy]
-startCommand = "cd apps/agents && pnpm start"
+startCommand = "npm run dev"
 healthcheckPath = "/info"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
