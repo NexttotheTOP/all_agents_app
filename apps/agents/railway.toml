@@ -1,9 +1,9 @@
 [build]
 builder = "nixpacks"
-buildCommand = "cd ../.. && corepack enable && corepack prepare pnpm@10.6.3 --activate && pnpm install && cd apps/agents && pnpm build:internal"
+buildCommand = "cd ../.. && npm install && cd apps/agents && npm run build:internal"
 
 [deploy]
-startCommand = "pnpm start"
+startCommand = "npm start"
 healthcheckPath = "/info"
 healthcheckTimeout = 100
 restartPolicyType = "on_failure"
